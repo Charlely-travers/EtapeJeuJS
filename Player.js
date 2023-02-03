@@ -19,8 +19,9 @@ class Player{
 
     update() {
         this.draw()
+        this.position.x += this.velocity.x
         this.position.y += this.velocity.y
-         if(this.position.y+this.height+this.velocity.y<=canvas.height)
+         if(this.position.y+this.height+this.velocity.y<=canvas.height) //verification que le joueur soit au dessus de la limite du canvas
             this.velocity.y += gravity
         else this.velocity.y=0
     }
