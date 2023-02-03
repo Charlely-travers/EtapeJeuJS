@@ -25,10 +25,10 @@ function animate() {
     player.update();
 
 
-    if (keys.right.pressed && player.position.x<canvas.width-player.width-0.01) {
+    if (keys.right.pressed && player.hitbox.position.x<canvas.width-player.hitbox.width) {
         player.velocity.x=5
     }
-    else if (keys.left.pressed && player.position.x>0+0.01) {
+    else if (keys.left.pressed && player.hitbox.position.x>0+0.01) {
         player.velocity.x=-5
     } 
     else player.velocity.x = 0
